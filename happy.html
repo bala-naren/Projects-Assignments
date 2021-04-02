@@ -1,113 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-
-  #myDiv{
-      text-align: center;
-      margin-left: 300px;
-    }
-    img{
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      left: 0px;
-      top: -20px;
-      animation: move 1s;
-
-    }
-    h1{
-      position: absolute;
-      color: #7f1488;
-      text-shadow: 2px 2px 2px #ff00f7, 0px 0px 5px pink;
-      line-height: 60px;
-      top: 55px;
-      left: 104px;
-      text-align: center;
-      position: absolute;
-      animation: colors 2s infinite both alternate, jump 1s infinite both alternate, pop 1s;
-    }
-
-     @keyframes jump{
-      from{transform: scale(1, 1)}
-      to{transform: scale(2, 2)}
-    }
-@keyframes colors{
-      0%{color: #7f1488;}
-      25%{color: pink;}
-      50%{color: yellow;}
-      75%{color: orange;}
-      100%{color: red}
-    }  
-
-    @keyframes pop{
-      from{top: -300px;}
-      to{top: 55px;}
-    }
-    @keyframes move{
-      from{left: 550px;}
-      to{left: 0px;}
-    }
-
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  margin: -76px 0 0 -76px;
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid #3498db;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.animate-bottom {
-  position: relative;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-</style>
+	<title>Happy Birthday To You</title>
+	<style>	
+		     img{
+			width: 300px;
+			height: 320px;
+			margin-left: 350px;
+		}
+		h1{
+			width: 300px;
+			padding: 10px;
+			margin-left: 320px;	
+			font-family: Arial;		
+			height: 40px;
+			text-align: center;
+			background-color: #d300ff;
+			background-image: linear-gradient(to bottom right, #d300ff, yellow); 
+		}
+	</style>
+	<script>
+            alert("Click The Box")
+        
+	</script>
 </head>
-<body onload="myFunction()" style="margin:0;">
+<body> 
+	<div class="div">
+		<h1>Click the box</h1>
+	<img src="giftbox.jpg" usemap="#gift">
 
-<div id="loader"></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <img src="https://img95.699pic.com/xsj/0z/ze/4h.jpg!/fh/300">
-    <h1>Happy Brithday<br>To You <br><i>"Name"<i></h1>
-</div>
-
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 10000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
-
+       <map name="gift">
+       	<area shape="poly" coords="4,100,52,75,49,59,67,44,93,56,90,36,118,25,135,46,145,48,186,36,200,63,251,77,254,217,156,310,4,252,4,100" href="open.html">
+       </map>
+   </div>
 </body>
-</html>
