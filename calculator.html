@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> 
+<head>  
+<title></title>
+</head> 
+<body> 
+  <p>VALUE 1: <input type="number" id="value1"></p>
+  <p>VALUE 2: <input type="number" id="value2"></p>
+  <input type="button" onclick="Addition()" value="Addition">
+  <input type="button" onclick="Subtraction()" value="Subtraction">
+  <input type="button" onclick="Multiply()" value="Multiply">
+  <input type="button" onclick="Divide()" value="Divide">
+
+  <p id="result"></p>
+  <script> 
+     const Addition = function (){
+     var num1=Number(document.getElementById("value1").value);
+     var num2=Number(document.getElementById("value2").value);
+      document.getElementById("result").innerHTML = num1 + num2;
+    }
+     const Subtraction = function (){
+     var num1=document.getElementById("value1").value;
+     var num2=document.getElementById("value2").value;
+      document.getElementById("result").innerHTML = num1 - num2;
+    }
+     const Multiply = function (){
+     var num1=document.getElementById("value1").value;
+     var num2=document.getElementById("value2").value;
+      document.getElementById("result").innerHTML = num1 * num2;
+    }
+     const Divide = function (){
+     var num1=document.getElementById("value1").value;
+     var num2=document.getElementById("value2").value;
+      document.getElementById("result").innerHTML = num1 / num2;
+    }
+  </script> 
+</body> 
+</html>
